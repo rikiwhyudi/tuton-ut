@@ -79,5 +79,3 @@ main <- function(){
   data_mahasiswa("D:/Programming/coding/r-lang", "Nilai_Komputer.txt", ",");
   
 };
-
-main();
