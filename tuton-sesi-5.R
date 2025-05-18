@@ -33,7 +33,11 @@ data_vektor <- function(x, y, kategori, frekuensi){
 };
 
 
-data_visualization <- function(kategori, frekuensi) {
+data_visualization <- function(x, y, kategori, frekuensi) {
+  
+  sunflowerplot(x, y, xlab = "X", ylab = "Y",  main = "Sunflowerplot Data (x, y)");
+  
+  plot(x, y, xlab = "X", ylab = "Y",  main = "Plot Data (x, y)");
   
   barplot(frekuensi, names.arg = kategori, 
         xlab = "Kategori", ylab = "Frekuensi",
@@ -51,11 +55,9 @@ main <- function() {
   info_mahasiswa("Riki Wahyudi", "Jakarta");
   x <- c(2, 1, 2, 4, 1, 2, 3, 4, 2, 3, 1);
   y <- c(4, 3, 4, 4, 3, 4, 5, 4, 4, 5, 3);
-  sunflowerplot(x, y, xlab = "X", ylab = "Y",  main = "Sunflowerplot Data (x, y)");
-  plot(x, y, xlab = "X", ylab = "Y",  main = "Plot Data (x, y)");
   kategori <- c("A", "B", "C", "D");
   frekuensi <- c(20, 35, 15, 30);
-  data_visualization(kategori, frekuensi);
+  data_visualization(x, y, kategori, frekuensi);
   create_layout(c(1, 2, 2, 3, 3, 4), 3, 2, 4);
   data_vektor(x, y, kategori, frekuensi);
   
